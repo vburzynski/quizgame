@@ -36,4 +36,8 @@
             %li= link_to "Default", "#"
             %li= link_to "Contact", "#"
     .container
+      -if notice
+        %p.notice.alert.alert-info= notice
+      -if alert
+        %p.alert.alert-danger= alert
       = yield
