@@ -5,4 +5,4 @@ Feature: Welcome Page
 
   Scenario: Visits home page
     Given I am on the home page
-    Then I should see the welcome message
+    Then I should see the welcome message\
