@@ -35,6 +35,7 @@
           %ul.nav.navbar-nav.navbar-right
             %li= link_to "Default", "#"
             %li= link_to "Contact", "#"
+            %li= link_to "Log Out", destroy_user_session_path, method: :delete if user_signed_in?
     .container
       -if notice
         %p.notice.alert.alert-info= notice
