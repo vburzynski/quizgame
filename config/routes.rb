@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+  get '/secret', to: 'pages#secret', as: :secret
+
   devise_for :users
-  get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  get 'welcome/index'
   root 'welcome#index'
-  get "welcome/index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

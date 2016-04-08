@@ -10,8 +10,7 @@
     #navbar.navbar-collapse.collapse
       %ul.nav.navbar-nav
         %li.active= link_to "Home", root_path
-        %li= link_to "Link 2", "#"
-        %li= link_to "Link 3", "#"
+        %li= link_to "Secret", "#" if user_signed_in?
         %li
           %a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
             Dropdown
