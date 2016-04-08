@@ -14,6 +14,8 @@ gem 'jbuilder',     '~> 2.0'    # Build JSON APIs with ease. Read more: https://
 gem 'sdoc',         '~> 0.4.0', group: :doc # bundle exec rake doc:rails generates the API under doc/api.
 gem 'nokogiri'
 gem 'devise'
+gem 'jquery-turbolinks'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
