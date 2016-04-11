@@ -29,19 +29,22 @@ gem 'jquery-turbolinks'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'byebug'      # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rspec-rails' # rspec
   gem 'shoulda-matchers'
+  gem 'byebug'      # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
 
 group :test do
-  gem 'factory_girl_rails'
+  gem 'rake'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'capybara-webkit'
-  gem 'rake'
+
+  gem 'factory_girl_rails'
+  gem 'launchy'
 end
 
 group :development do

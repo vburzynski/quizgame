@@ -1,15 +1,14 @@
-Given(/^I am logged in$/) do
-  @user = create(:user)
-  visit new_user_session_path
-  fill_in 'user_email', with: @user.email
-  fill_in 'user_password', with: 'password'
-  click_on 'Log In'
-  save_and_open_page
-  expect(page).to have_content('Signed in successfully.')
+def sign_in
+  visit '/users/sign_in'
+  fill_in :user_email, with: @user.email
+  fill_in :user_password, with: 'password'
+  click_button "Log in"
 end
 
-Then(/^I should be logged in$/) do
-  Fail "not logged in" unless user_logged_in?
+Given(/^I am logged in$/) do
+  @user = create(:user)
+  sign_in
+  expect(page).to have_content('Signed in successfully.')
 end
 
 Given(/^I am on the home page$/) do
