@@ -4,5 +4,6 @@
   .col-md-6.text-center
     %h2 one
     Hello world
-= link_to "Sign In", user_session_path, class: "btn btn-lg btn-default"
-= link_to "Register", new_user_registration_path, class: "btn btn-lg btn-default"
+- unless user_signed_in?
+  = link_to "Sign In", user_session_path, class: "btn btn-lg btn-default"
+  = link_to "Register", new_user_registration_path, class: "btn btn-lg btn-default"

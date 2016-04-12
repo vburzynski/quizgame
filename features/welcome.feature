@@ -12,9 +12,9 @@ Feature: Welcome Page
 
   Scenario: Visits home page after login
     Given I am logged in
-      # And I am on the home page
+      And I am on the home page
     Then I should see my user name
       And I should see a log out links
       And I should see a profile link
-      # And I should not see a sign in link
-      # And I should not see a registration link
+      And I should not see a sign in link
+      And I should not see a registration link
