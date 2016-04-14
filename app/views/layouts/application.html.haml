@@ -8,7 +8,7 @@
     = csrf_meta_tags
   %body
     = render 'layouts/header'
-    .container
+    .container{:data => { page_type: "#{content_for?(:container_class) ? yield(:container_class) : 'default'}"}}
       -if notice
         %p.notice.alert.alert-info= notice
       -if alert
