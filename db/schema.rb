@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160406211959) do
+ActiveRecord::Schema.define(version: 20160414200207) do
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "prompt"
+    t.string   "correct_feedback"
+    t.string   "incorrect_feedback"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
