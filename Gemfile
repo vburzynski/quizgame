@@ -38,7 +38,8 @@ group :test do
   gem 'rake'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
-
+  gem 'faker'
+  
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'capybara-webkit'
