@@ -13,5 +13,4 @@ RSpec.describe Question, type: :model do
   it "is invalid without incorrect feedback" do
     expect(FactoryGirl.build(:question, incorrect_feedback: nil)).to_not be_valid
   end
-
 end

@@ -1,0 +1,11 @@
+%h1 Question #{@question.id}
+
+%p
+  %span.strong Question:
+  = @question.prompt
+%p
+  %span.strong Correct Feedback:
+  = @question.correct_feedback
+%p
+  %span.strong Incorrect Feedback:
+  = @question.incorrect_feedback
