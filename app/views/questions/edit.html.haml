@@ -1,0 +1,16 @@
+%h1 Edit Question Form
+
+.row
+  .col-md-6.col-md-offset-3
+    = form_for(@question) do |f|
+      = render 'error_messages'
+      .form-group
+        = f.label :prompt
+        = f.text_field :prompt, class: "form-control"
+      .form-group
+        = f.label :correct_feedback
+        = f.text_field :correct_feedback, class: "form-control"
+      .form-group
+        = f.label :incorrect_feedback
+        = f.text_field :incorrect_feedback, class: "form-control"
+      = f.submit "Save Question", class: "btn btn-primary"
