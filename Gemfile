@@ -30,7 +30,6 @@ gem 'jquery-turbolinks'         # jQuery plugin for drop-in fix binded events pr
 
 group :development, :test do
   gem 'rspec-rails' # rspec
-  gem 'shoulda-matchers' # testing matchers
   gem 'byebug' # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
 
@@ -41,10 +40,10 @@ group :test do
   gem 'faker' # fake data generator
   gem 'capybara' # integration testing tool
   gem 'selenium-webdriver' # tool for automated tests of websites
-  # gem 'capybara-webkit' # headless webkit driver
   gem 'poltergeist' # headless phatomJS driver
   gem 'factory_girl_rails' # object factories
   gem 'launchy' # launch cross platform appliations
+  gem 'shoulda-matchers' # testing matchers
 end
 
 group :development do

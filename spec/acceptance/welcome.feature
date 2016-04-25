@@ -4,7 +4,7 @@ Feature: Welcome Page
   Should be able to access a home page
 
   Scenario: Visits home page before login
-    Given I am on the home page
+    Given I visit "the home page"
     Then I should see the welcome message
       And I should see a sign in link
       And I should see a registration link
@@ -12,7 +12,7 @@ Feature: Welcome Page
 
   Scenario: Visits home page after login
     Given I am logged in
-      And I am on the home page
+      And I visit "the home page"
     Then I should see my user name
       And I should see a log out links
       And I should see a profile link
