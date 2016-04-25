@@ -12,9 +12,9 @@ gem 'jquery-rails'              # Use jquery as the JavaScript library
 gem 'turbolinks'                # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'jbuilder',     '~> 2.0'    # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'sdoc',         '~> 0.4.0', group: :doc # bundle exec rake doc:rails generates the API under doc/api.
-gem 'nokogiri'
-gem 'devise'
-gem 'jquery-turbolinks'
+gem 'nokogiri'                  # HTML, XML, SAX, Reader parser
+gem 'devise'                    # authentication solution
+gem 'jquery-turbolinks'         # jQuery plugin for drop-in fix binded events problem
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -30,22 +30,21 @@ gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'rspec-rails' # rspec
-  gem 'shoulda-matchers'
-  gem 'byebug'      # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'shoulda-matchers' # testing matchers
+  gem 'byebug' # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
 
 group :test do
-  gem 'rake'
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
-  gem 'faker'
-  
-  gem 'capybara'
-  gem 'selenium-webdriver'
-  gem 'capybara-webkit'
-
-  gem 'factory_girl_rails'
-  gem 'launchy'
+  gem 'rake' # make-like program
+  gem 'turnip' # Gherkin within RSpec
+  gem 'database_cleaner' # strategies for cleaning databases
+  gem 'faker' # fake data generator
+  gem 'capybara' # integration testing tool
+  gem 'selenium-webdriver' # tool for automated tests of websites
+  # gem 'capybara-webkit' # headless webkit driver
+  gem 'poltergeist' # headless phatomJS driver
+  gem 'factory_girl_rails' # object factories
+  gem 'launchy' # launch cross platform appliations
 end
 
 group :development do
