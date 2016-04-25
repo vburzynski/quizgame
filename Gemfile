@@ -30,7 +30,8 @@ gem 'jquery-turbolinks'         # jQuery plugin for drop-in fix binded events pr
 
 group :development, :test do
   gem 'rspec-rails' # rspec
-  gem 'byebug' # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :test do

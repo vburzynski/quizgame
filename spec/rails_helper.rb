@@ -26,9 +26,10 @@ require 'capybara/poltergeist'
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 # Load all step definitions for Turnip
-Dir.glob("spec/steps/**/*steps.rb") { |f| load f, true }
+Dir.glob("spec/steps/**/*steps.rb") { |f| load f }
 
-require './spec/steps/navigation_steps.rb'
+#require './spec/steps/navigation_steps.rb'
+
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
