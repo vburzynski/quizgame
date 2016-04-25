@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414200207) do
+ActiveRecord::Schema.define(version: 20160425214230) do
+
+  create_table "question_options", force: :cascade do |t|
+    t.text     "content"
+    t.boolean  "correct"
+    t.integer  "order"
+    t.integer  "question_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "question_options", ["order"], name: "index_question_options_on_order"
+  add_index "question_options", ["question_id"], name: "index_question_options_on_question_id"
 
   create_table "questions", force: :cascade do |t|
     t.string   "prompt"
