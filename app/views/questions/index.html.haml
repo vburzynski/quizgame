@@ -4,3 +4,6 @@
   - @questions.each do |question|
     %li
       = link_to question.prompt, question
+      = link_to "delete", question, method: :delete, data: { confirm: "You sure?" }
+
+= link_to "New Question", new_question_path

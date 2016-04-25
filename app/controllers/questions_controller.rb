@@ -1,4 +1,9 @@
 class QuestionsController < ApplicationController
+  # TODO Paginate Qustions
+  # TODO Restrict question deltion to certain users
+  
+  before_action :authenticate_user!
+
   def new
     @question = Question.new
   end
@@ -31,6 +36,12 @@ class QuestionsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    Question.find(params[:id]).destroy
+    flash[:success] = "Question deleted"
+    redirect_to questions_url
   end
 
   private
