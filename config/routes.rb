@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   resources :questions
-
+  resources :question_options, only: [:create, :destroy, :update]
+  
   get '/secret', to: 'pages#secret', as: :secret
 
   devise_for :users

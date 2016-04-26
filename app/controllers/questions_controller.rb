@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   # TODO Paginate Qustions
   # TODO Restrict question deltion to certain users
-  
+
   before_action :authenticate_user!
 
   def new
@@ -10,6 +10,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+    @question_options = @question.question_options
   end
 
   def index

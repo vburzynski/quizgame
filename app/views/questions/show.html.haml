@@ -10,5 +10,11 @@
   %span.strong Incorrect Feedback:
   = @question.incorrect_feedback
 
+- if @question.question_options.any?
+  %p Options:
+  %ul
+    = render @question_options
+
+= render 'question_options/form'
 
 = link_to "Edit", edit_question_path(@question)
