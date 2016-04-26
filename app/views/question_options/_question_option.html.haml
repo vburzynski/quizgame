@@ -1,0 +1,4 @@
+%li{ :id => "option-#{question_option.id}", :class => "option" }
+  = question_option.content
+  = "[correct]" if question_option.correct
+  = link_to "delete", question_option, method: :delete, data: { confirm: "You sure?" }

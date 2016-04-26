@@ -1,0 +1,9 @@
+= form_for(@question.question_options.build) do |f|
+  = hidden_field_tag(:question_id, @question.id)
+  .form-group
+    = f.label :content
+    = f.text_field :content, class: "form-control"
+  .form-group
+    = f.label :correct
+    = f.check_box :correct
+  = f.submit "Add Option", class: "btn btn-primary"
