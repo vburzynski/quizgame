@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Question, type: :model do
-  it "has a valid factory" do
+  it "is valid with a prompt, correct feedback, and incorrect feedback" do
     expect(FactoryGirl.create(:question)).to be_valid
   end
   it "is invalid without a prompt" do
