@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "questions/show.html.haml", type: :view do
+RSpec.describe "questions/edit.html.haml", type: :view do
   it "displays question information correctly" do
     assign(:question, Question.create({
       :prompt => "Hello world?",
@@ -10,8 +10,8 @@ RSpec.describe "questions/show.html.haml", type: :view do
 
     render
 
-    expect(rendered).to have_content("Hello world?")
-    expect(rendered).to have_content("correct")
-    expect(rendered).to have_content("incorrect")
+    expect(rendered).to have_xpath("//input[@value='Hello world?']")
+    expect(rendered).to have_xpath("//input[@value='correct']")
+    expect(rendered).to have_xpath("//input[@value='incorrect']")
   end
 end
