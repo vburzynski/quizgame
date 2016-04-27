@@ -63,11 +63,19 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  # Capybara
   config.include Capybara::DSL
+
+  # url routes
+  config.include Rails.application.routes.url_helpers
+
+  # Step Modules for Turnip
+  config.include NavigationSteps
+  
   config.include Devise::TestHelpers, type: :controller
   config.include Devise::TestHelpers, type: :view
-  config.include NavigationSteps
-  config.include Rails.application.routes.url_helpers
+  config.include FactoryGirl::Syntax::Methods
+  config.include Warden::Test::Helpers
 end
 
 Capybara.javascript_driver = :poltergeist

@@ -33,6 +33,7 @@ group :development, :test do
   gem 'faker' # fake data generator
   gem 'pry'
   gem 'pry-byebug'
+  gem 'guard-rspec'
 end
 
 group :test do
