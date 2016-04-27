@@ -53,6 +53,8 @@ RSpec.configure do |config|
     FactoryGirl.lint
     DatabaseCleaner.clean_with(:truncation)
     DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.start
+    DatabaseCleaner.clean
   end
 
   config.around(:each, type: :feature, javascript: true) do |example|
@@ -69,8 +71,12 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  config.after(:suite) do
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
   config.include ControllerHelpers, type: :controller
-  
+
   Warden.test_mode!
   config.after do
     Warden.test_reset!
