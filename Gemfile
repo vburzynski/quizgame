@@ -30,6 +30,7 @@ gem 'jquery-turbolinks'         # jQuery plugin for drop-in fix binded events pr
 
 group :development, :test do
   gem 'rspec-rails' # rspec
+  gem 'faker' # fake data generator
   gem 'pry'
   gem 'pry-byebug'
 end
@@ -38,7 +39,6 @@ group :test do
   gem 'rake' # make-like program
   gem 'turnip' # Gherkin within RSpec
   gem 'database_cleaner' # strategies for cleaning databases
-  gem 'faker' # fake data generator
   gem 'capybara' # integration testing tool
   gem 'selenium-webdriver' # tool for automated tests of websites
   gem 'poltergeist' # headless phatomJS driver
