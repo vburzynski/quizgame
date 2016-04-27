@@ -1,13 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe QuestionsController, type: :controller do
-  describe "anonymous user" do
-    before :each do
-      login_with nil
+  describe "GET #index" do
+    context "anonymous user" do
+      before :each do
+        login_with nil
+      end
+      it "should be redirected to create a new account" do
+        get :index
+        expect(response).to redirect_to(new_user_session_path)
+      end
     end
-    it "should be redirected to create a new account" do
-      get :index
-      expect(response).to redirect_to(new_user_session_path)
+    context "authenticated user" do
+      before :each do
+        login_with create( :user )
+      end
+      it "should let a user see all the posts" do
+        get :index
+        expect( response ).to render_template( :index )
+      end
     end
   end
 
