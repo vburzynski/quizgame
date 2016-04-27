@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe QuestionOption, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "is valid with content and correct status"
+  it "is invalid without content"
+  it "is invalid without correct status"
 end
